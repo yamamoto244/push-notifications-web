@@ -325,7 +325,7 @@ export class Client {
       this.instanceId
     )}/devices/web/${this._deviceId}/user`;
 
-    const { token: beamsAuthToken } = await tokenProvider.fetchToken(userId);
+    const beamsAuthToken = await tokenProvider.fetchToken(userId);
     const options = {
       method: 'PUT',
       path,
